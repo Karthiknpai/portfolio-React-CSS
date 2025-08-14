@@ -13,7 +13,7 @@ const HeroSection = () => {
       setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
     }, 2500);
     return () => clearInterval(interval);
-  }, []);
+  }, [roles.length]); // ✅ Added dependency
 
   return (
     <section className="intro-section">
@@ -33,10 +33,10 @@ const HeroSection = () => {
           </h2>
 
           <p className="intro-description">
-            Versatile and fast-learning web developer with experience in ReactJS,
-            JavaScript, and responsive UI design. Skilled in creating intuitive,
-            user-friendly front-end solutions and integrating them with robust
-            backend systems to deliver seamless digital experiences.
+            Versatile and fast-learning web developer with experience in
+            ReactJS, JavaScript, and responsive UI design. Skilled in creating
+            intuitive, user-friendly front-end solutions and integrating them
+            with robust backend systems to deliver seamless digital experiences.
           </p>
 
           <div className="contact-buttons">
