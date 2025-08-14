@@ -1,0 +1,127 @@
+/* Full-width background */
+.experience-section {
+  width: 100%;
+  background: linear-gradient(135deg, #dfe9f3, #ffffff); /* Full-width background */
+  padding: 4rem 0;
+}
+
+/* Inner container to center content */
+.experience-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Section title */
+.experience-title {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  background: linear-gradient(90deg, #0066ff, #16a085);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 5px;
+}
+
+/* Optional subtitle */
+.experience-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Experience card */
+.experience-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Card header */
+.experience-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.experience-logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: #f0f0f0;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+}
+
+/* Role and company below it */
+.role {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #000; /* Black text */
+}
+
+.company {
+  margin: 0;
+  font-size: 1rem;
+  color: #000; /* Black text */
+  line-height: 1.2; /* Reduce gap between role and company */
+}
+
+.experience-description {
+  margin: 1rem 0;
+  color: #555;
+}
+
+.experience-points {
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.experience-points li {
+  margin-bottom: 0.5rem;
+}
+
+.experience-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-badge {
+  background-color: #007bff;
+  color: white;
+  padding: 0.3rem 0.7rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .experience-logo {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .role {
+    font-size: 1.1rem;
+  }
+
+  .company {
+    font-size: 0.95rem;
+  }
+}
+

@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Header from "./Header";
+import HeroSection from "./HeroSection";
+import AboutMe from "./AboutMe";
+import Experience from "./Experience";
+import ProjectSection from "./ProjectSection";
+import ProjectDetail from "./ProjectDetails";
+import SkillsSection from "./SkillsSection";
+import ConnectSection from "./ConnectSection";
+import Footer from "./Footer";
+import ScrollToTop from "./ScrollToTop";
+
+import "./App.css";
+
+function HomePage() {
+  return (
+    <div className="app-container">
+      <section id="hero"><HeroSection /></section>
+      <section id="about"><AboutMe /></section>
+      <section id="experience"><Experience /></section>
+      <section id="skills"><SkillsSection /></section>
+      <section id="projects"><ProjectSection /></section>
+      <section id="contact"><ConnectSection /></section>
+      <Footer />
+    </div>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <ScrollToTop /> {/* Ensures page always starts at top */}
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/projects/:id" element={<ProjectDetail />} />
+      </Routes>
+    </Router>
   );
 }
 

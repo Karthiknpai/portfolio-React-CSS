@@ -1,0 +1,106 @@
+.connect-section {
+  background: #fff;
+  padding: 50px 20px;
+  /* max-width: 1300px; */
+  margin: auto;
+  border-radius: 10px;
+}
+
+.connect-title {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  background: linear-gradient(90deg, #0066ff, #16a085);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 5px;
+}
+
+.highlight {
+  color: #16a085;
+}
+
+.connect-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Grid layout */
+.connect-grid {
+  display: flex;
+  justify-content: center; /* Center all boxes horizontally */
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.connect-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 15px;
+  align-items: center;
+  width: 300px; /* fixed width for all boxes for proper alignment */
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.connect-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.connect-icon {
+  font-size: 2.2rem;
+}
+
+/* Specific colors for icons */
+.connect-item:nth-child(1) .connect-icon {
+  color: #0066ff; /* Email - blue */
+}
+
+.connect-item:nth-child(2) .connect-icon {
+  color: #28a745; /* Phone - green */
+}
+
+.connect-item:nth-child(3) .connect-icon {
+  color: #0077b5; /* LinkedIn - LinkedIn blue */
+}
+
+.connect-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.connect-label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.connect-value {
+  font-size: 0.95rem;
+  color: #0066ff;
+  text-decoration: none;
+  margin-top: 2px;
+}
+
+.connect-value:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .connect-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .connect-item {
+    width: 90%; /* responsive width on mobile */
+  }
+}
