@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./HeroSection.css";
 import { FaEnvelope, FaPhoneAlt, FaLinkedin } from "react-icons/fa";
 import profilePic from "./assets/Karthiknpai_Professional_Photo.jpg";
-import resumePDF from "./assets/K_Karthik_Narayan_Pai_Resume.pdf";
+import resumePDF from "./assets/K_Karthik_Narayan_Pai.pdf";
 
 const HeroSection = () => {
   const roles = ["Software Developer", "Web Developer", "Frontend Developer"];
